@@ -1,0 +1,285 @@
+:root {
+  --purple: #6c25ff;
+  --purple-light: #d9c7ff;
+  --text-dark: #1f1f1f;
+  --text-muted: #7a7a7a;
+  --border: #dcdcdc;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: #f2f2f2;
+  color: var(--text-dark);
+}
+
+a {
+  text-decoration: none;
+}
+
+.app-shell {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 16px;
+}
+
+.phone {
+  width: 375px;
+  height: 812px;
+  background: #ffffff;
+  border: 1px solid #dcdcdc;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.page {
+  height: 100%;
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--text-dark);
+}
+
+.subtitle {
+  margin-top: 10px;
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--text-muted);
+}
+
+.landing {
+  justify-content: flex-end;
+  padding: 0 24px 36px;
+}
+
+.landing-content {
+  width: 100%;
+}
+
+.button-stack {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 46px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+.btn-primary {
+  background: var(--purple);
+  color: #ffffff;
+}
+
+.btn-secondary {
+  background: var(--purple-light);
+  color: #1f1f1f;
+}
+
+.btn-disabled {
+  background: #cbcbcb;
+  color: #ffffff;
+}
+
+.form-page {
+  padding: 40px 24px 24px;
+}
+
+.form-header {
+  margin-bottom: 20px;
+  position: relative;
+  padding-top: 22px;
+}
+
+.back-button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 28px;
+  height: 28px;
+  border: none;
+  background: transparent;
+  color: #1f1f1f;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.back-button svg {
+  width: 20px;
+  height: 20px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.signup-form {
+  flex: 1;
+}
+
+.signup-form .btn {
+  margin-top: auto;
+}
+
+.field {
+  position: relative;
+  padding-top: 6px;
+}
+
+.field-label {
+  position: absolute;
+  left: 12px;
+  top: -8px;
+  background: #ffffff;
+  padding: 0 6px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--purple);
+}
+
+.field-input {
+  height: 40px;
+  border-radius: 6px;
+  border: 1px solid #d6d6d6;
+  padding: 0 14px;
+  font-size: 14px;
+  color: #2f2f2f;
+  background: #ffffff;
+}
+
+.field-input::placeholder {
+  color: #b7b7b7;
+}
+
+.radio-group {
+  padding-top: 2px;
+}
+
+.radio-group .field-label {
+  position: static;
+  padding: 0;
+  background: transparent;
+  color: #1f1f1f;
+  font-size: 13px;
+}
+
+.radio-options {
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  font-size: 14px;
+  color: #1f1f1f;
+}
+
+.radio {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.radio input {
+  accent-color: var(--purple);
+  width: 18px;
+  height: 18px;
+}
+
+.profile {
+  padding: 0;
+  background: #f7f7f7;
+}
+
+.profile-header {
+  padding: 16px 20px;
+  font-size: 15px;
+  font-weight: 500;
+  border-bottom: 1px solid #e1e1e1;
+  background: #ffffff;
+}
+
+.profile-card {
+  padding: 18px 20px 12px;
+  background: #ffffff;
+}
+
+.profile-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.avatar {
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.profile-name {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.profile-email {
+  font-size: 12.5px;
+  color: #2f2f2f;
+}
+
+.profile-bio {
+  font-size: 13px;
+  line-height: 1.6;
+  color: #2b2b2b;
+}
+
+.profile-divider {
+  margin: 8px 20px 0;
+  border-top: 1px dashed #cfcfcf;
+  height: 1px;
+}
+
+@media (max-width: 480px) {
+  .app-shell {
+    padding: 0;
+  }
+
+  .phone {
+    width: 100%;
+    height: 100vh;
+    border-radius: 0;
+  }
+}
